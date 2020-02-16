@@ -20,8 +20,8 @@ You will need the following things properly installed on your computer.
 
 ## Create Project
 
-* `npm install -g ember-cli`
-* `npm new web-ember-app`
+* `npm install -g ember-cli` Install Ember
+* `npm new web-ember-app` Create a New Application
 * `npm fund`
 * `npm audit fix`
 

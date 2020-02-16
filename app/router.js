@@ -10,4 +10,8 @@ Router.map(function() {
   this.route('mdc', function() {
     this.route('typography');
   });
+
+  this.route('ember', function() {
+    this.route('scientists');
+  });
 });

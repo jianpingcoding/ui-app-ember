@@ -18,6 +18,9 @@ module.exports = function(defaults) {
       includePaths: [
         'vendor'
       ]
+    },
+    'ember-cli-babel': {
+      includePolyfill: true
     }
   });
 
