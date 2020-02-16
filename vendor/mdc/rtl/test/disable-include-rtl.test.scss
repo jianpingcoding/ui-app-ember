@@ -1,0 +1,6 @@
+@use "../index" with (
+  $include: false,
+);
+@use "mdc/button/mdc-button";
+@use "mdc/textfield/mdc-text-field";
+@use "mdc/typography/mdc-typography";

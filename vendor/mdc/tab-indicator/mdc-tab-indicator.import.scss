@@ -1,0 +1,10 @@
+@forward "mdc/animation/variables" as mdc-animation-*;
+@forward "mdc/feature-targeting/variables" as mdc-feature-*;
+@forward "mdc/feature-targeting/mixins" as mdc-feature-*;
+@forward "mdc/theme/constants" as mdc-theme-*;
+@forward "mdc/theme/variables" as mdc-theme-*;
+@forward "mdc/theme/mixins" as mdc-theme-*;
+@forward "mixins" as mdc-tab-indicator-*;
+@forward "mdc/feature-targeting/functions" as mdc-feature-*;
+@forward "mdc/theme/functions" as mdc-theme-*;
+@forward "mdc-tab-indicator";

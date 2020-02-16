@@ -1,0 +1,70 @@
+/* Add Material Icons */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('material-icons/material-icons-regular.woff2') format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Overriding Theme Styles */
+$mdc-theme-primary: #009688;
+$mdc-theme-on-primary: #33333D;
+$mdc-theme-secondary: #009688;
+$mdc-theme-on-secondary: #FFFFFF;
+
+/* Overriding Font Styles */
+$mdc-typography-font-family: "Roboto Regular";
+
+/* Import MDC components */
+@import "mdc/button/mdc-button";
+@import "mdc/card/mdc-card";
+@import "mdc/checkbox/mdc-checkbox";
+@import "mdc/chips/mdc-chips";
+@import "mdc/dialog/mdc-dialog";
+@import "mdc/drawer/mdc-drawer";
+@import "mdc/elevation/mdc-elevation";
+@import "mdc/fab/mdc-fab";
+@import "mdc/floating-label/mdc-floating-label";
+@import "mdc/form-field/mdc-form-field";
+// @import "mdc/grid-list/mdc-grid-list";
+@import "mdc/icon-button/mdc-icon-button";
+@import "mdc/image-list/mdc-image-list";
+@import "mdc/layout-grid/mdc-layout-grid";
+@import "mdc/line-ripple/mdc-line-ripple";
+@import "mdc/linear-progress/mdc-linear-progress";
+@import "mdc/list/mdc-list";
+@import "mdc/menu/mdc-menu";
+@import "mdc/menu-surface/mdc-menu-surface";
+@import "mdc/notched-outline/mdc-notched-outline";
+@import "mdc/radio/mdc-radio";
+@import "mdc/ripple/mdc-ripple";
+@import "mdc/select/mdc-select";
+@import "mdc/slider/mdc-slider";
+@import "mdc/snackbar/mdc-snackbar";
+@import "mdc/switch/mdc-switch";
+@import "mdc/tab/mdc-tab";
+@import "mdc/tab-bar/mdc-tab-bar";
+@import "mdc/tab-indicator/mdc-tab-indicator";
+@import "mdc/tab-scroller/mdc-tab-scroller";
+@import "mdc/textfield/mdc-text-field";
+@import "mdc/theme/mdc-theme";
+// @import "mdc/toolbar/mdc-toolbar";
+@import "mdc/top-app-bar/mdc-top-app-bar";
+@import "mdc/typography/mdc-typography";
+@import "mdc/textfield/helper-text/mdc-text-field-helper-text";

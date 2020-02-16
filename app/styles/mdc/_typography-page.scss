@@ -1,0 +1,16 @@
+.mdc-typography-page {
+  max-width: 1240px;
+  margin: auto;
+  padding: 16px;
+
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .center {
+    text-align: center;
+  }
+}

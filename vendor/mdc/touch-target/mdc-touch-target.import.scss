@@ -1,0 +1,8 @@
+@forward "mdc/base/mixins" as mdc-base-*;
+@forward "mdc/feature-targeting/variables" as mdc-feature-*;
+@forward "mdc/feature-targeting/mixins" as mdc-feature-*;
+@forward "variables" as mdc-touch-target-*;
+@forward "mixins" as mdc-* hide mdc-margin, mdc-wrapper;
+@forward "mixins" as mdc-touch-target-* hide mdc-touch-target-touch-target;
+@forward "mdc/feature-targeting/functions" as mdc-feature-*;
+@forward "mdc-touch-target";

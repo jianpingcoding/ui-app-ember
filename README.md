@@ -18,16 +18,19 @@ You will need the following things properly installed on your computer.
 * `cd web-ember-app`
 * `npm install`
 
+## Create Project
+
+* `npm install -g ember-cli`
+* `npm new web-ember-app`
+* `npm fund`
+* `npm audit fix`
+
 ## Running / Development
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### npm
-
-* `npm fund`
-* `npm audit fix`
+* [mdc/typography](http://localhost:4200/mdc/typography)
 
 ### Code Generators
 
@@ -37,6 +40,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember test`
 * `ember test --server`
+* `ember t -s`
 
 ### Linting
 
