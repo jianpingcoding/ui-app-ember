@@ -66,3 +66,4 @@ Specify what it takes to deploy your app.
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 * [patreon](https://www.patreon.com/)
 * [open collective](https://opencollective.com/)
+* [ES 6] (https://es6.io)
