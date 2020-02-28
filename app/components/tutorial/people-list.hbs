@@ -1,11 +1,63 @@
-<h2>{{@title}}</h2>
+<!-- The ...attributes syntax determines where the attributes from a tag should appear in the component's template. -->
+<div ...attributes>
 
-<ul>
-  {{#each @people as |person|}}
-    <li>
-        <button {{on 'click' (fn this.showPerson person)}}>
-            {{person}}
-        </button>
-    </li>
-  {{/each}}
-</ul>
+  <!-- Conditional Content -->
+  {{#if @title}}
+    <h2>{{@title}}</h2>
+  {{/if}}
+  
+  <ul>
+    {{#each @people as |person index|}}
+      <!-- Inline if -->
+      <li 
+        class="item {{if person.isActive "is-active" "standard"}}"
+        {{on 'click' (fn this.showName person.name)}}
+      >
+        <!-- Built-in Helpers: get, concat, let -->
+        {{concat index '. ' person.firstName " " (get person 'lastName')}}
+
+        {{#let person.contact.countryCode person.contact.number 
+              as |countryCode number|}}
+          (+{{countryCode}}-{{number}})
+        {{/let}}
+      </li>
+    {{/each}}
+  </ul>
+
+  <h2>Categories (each-in)</h2>
+  <ul>
+    {{#each-in this.categories as |category products|}}
+      <li>{{category}}
+        <ol>
+          {{#each products as |product|}}
+            <li>{{product}}</li>
+          {{/each}}
+        </ol>
+      </li>
+    {{else}}
+      Sorry, no category is here.
+    {{/each-in}}
+  </ul>
+
+  <!-- HTML Modifiers -->
+  <p>Count: {{this.count}}</p>
+  <p>× {{@multiple}}</p>
+  <p>= {{this.total}}</p>
+  <button {{on "click" (fn this.change 1)}}>+1</button>
+  <button {{on "click" this.double}}>Double It</button>
+
+  <!-- Calling Methods On First Render -->
+  <form>
+    <p>
+      <input {{autofocus}}>
+    </p>
+  </form>
+
+  <p>
+    {{#if @hasCopyright}}
+      {{yield @copyright.year @copyright.name}}
+    {{else}}
+      COPYRIGHT 2020 TILDE INC. 
+    {{/if}}
+  </p>
+</div>
