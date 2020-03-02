@@ -12,4 +12,5 @@ Router.map(function() {
   this.route('tutorial', function() {
     this.route('scientists');
   });
+  this.route('js', function() {});
 });
