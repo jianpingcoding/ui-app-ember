@@ -4,24 +4,7 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    eslint: {
-      testGenerator: 'qunit', // qunit and mocha
-      group: true,
-      rulesDir: 'eslint-rules',
-      extensions: ['js'], // ['js', 'ts']
-    },
-    sassOptions: {
-      extension: "scss",
-      sourceMap: true,
-      onlyIncluded: true,
-      sourceMap: false,
-      includePaths: [
-        'vendor'
-      ]
-    },
-    'ember-cli-babel': {
-      includePolyfill: true
-    }
+    // Add options here
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -37,30 +20,5 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  let mdcModuleNames = ["ripple", "textfield", "list", "drawer", "top-app-bar", "chips",
-    "form-field", "checkbox", "radio", "select", "floating-label", "slider", "switch", "icon-button"];
-  mdcModuleNames.forEach(function(moduleName) {
-    app.import({
-        development: `vendor/mdc/${moduleName}/dist/mdc.${camelize(moduleName)}.js`,
-        production: `vendor/mdc/${moduleName}/dist/mdc.${camelize(moduleName)}.js`,
-      },{ 
-        using: [{ transformation: 'amd', as: `@material/${moduleName}` }] 
-      }
-    );
-  });
-
   return app.toTree();
 };
-
-const STRING_CAMELIZE_REGEXP_1 = /(\-|\_|\.|\s)+(.)?/g;
-const STRING_CAMELIZE_REGEXP_2 = /(^|\/)([A-Z])/g;
-
-function camelize(str) {
-  return str
-    .replace(STRING_CAMELIZE_REGEXP_1, function(match, separator, chr) {
-      return chr ? chr.toUpperCase() : '';
-    })
-    .replace(STRING_CAMELIZE_REGEXP_2, function(match) {
-      return match.toLowerCase();
-    });
-}
